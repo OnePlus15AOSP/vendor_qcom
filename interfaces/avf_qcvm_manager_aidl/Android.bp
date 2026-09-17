@@ -1,0 +1,30 @@
+aidl_interface {
+    name: "vendor.qti.AvfQcvmManager",
+    srcs: ["vendor/qti/AvfQcvmManager/*.aidl"],
+    system_ext_specific: true,
+    vendor_available: true,
+    product_available: true,
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+        rust: {
+            enabled: true,
+        },
+    },
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}

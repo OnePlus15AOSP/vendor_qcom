@@ -1,0 +1,26 @@
+Source: qcom-libvmmem
+Section: libs
+Priority: optional
+Maintainer: Vijayanand Jitta <quic_vjitta@quicinc.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13), pkgconf
+Standards-Version: 4.6.2
+Homepage: https://git.codelinaro.org/clo/le/platform/system/memory/libvmmem
+
+Package: qcom-libvmmem-dev
+Section: libdevel
+Architecture: arm64 amd64
+Depends:
+ qcom-libvmmem (= ${binary:Version}),
+ ${misc:Depends},
+Description: Library to interface membuf node - development files
+ Development files for libvmmem
+
+Package: qcom-libvmmem
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Library to interface membuf node
+ Library to access kernel membuf node.

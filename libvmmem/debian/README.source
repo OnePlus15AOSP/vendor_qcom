@@ -1,0 +1,7 @@
+libvmmem for Debian
+-------------------
+
+Build from https://git.codelinaro.org/clo/le/platform/system/memory/libvmmem.git
+branch kernel.apps.lnx.4.0.
+
+ -- Vijayanand Jitta <quic_vjitta@quicinc.com>  Fri, 17 Jan 2025 10:27:41 +0000

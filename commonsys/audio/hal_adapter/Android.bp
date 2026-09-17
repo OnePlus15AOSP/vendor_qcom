@@ -1,0 +1,39 @@
+cc_library {
+    name: "libaudiohalvendorextn",
+    system_ext_specific: true,
+    srcs: ["HalAdapterVendorExtension.cpp"],
+
+    export_include_dirs: [
+        "include",
+    ],
+
+    header_libs: [
+        "libsystem_headers",
+    ],
+
+    shared_libs: [
+        "av-audio-types-aidl-ndk",
+        "libbinder_ndk",
+        "libbase",
+        "qti-audio-types-aidl-V1-ndk",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wthread-safety",
+        "-DBACKEND_NDK",
+    ],
+}
+
+cc_binary {
+    name: "qtiaudiohalvendorextn",
+    system_ext_specific: true,
+    init_rc: ["qtiaudiohalvendorextn.rc"],
+    srcs: ["main.cpp"],
+    shared_libs: [
+        "libaudiohalvendorextn",
+        "libbinder_ndk",
+    ],
+}

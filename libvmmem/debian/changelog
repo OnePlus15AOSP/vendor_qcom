@@ -1,0 +1,5 @@
+qcom-libvmmem (1.0.0) noble; urgency=medium
+
+  * Initial release.
+
+ -- Vijayanand Jitta <quic_vjitta@quicinc.com>  Fri, 17 Jan 2025 10:27:41 +0000

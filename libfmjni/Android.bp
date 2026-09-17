@@ -1,0 +1,21 @@
+//
+// SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+filegroup {
+    name: "libfmjni-qcom-srcs",
+    srcs: [
+        "FmIoctlsInterface.cpp",
+        "ConfigFmThs.cpp",
+        "FmPerformanceParams.cpp",
+        "ConfFileParser.cpp",
+        "FmRadioController.cpp",
+        "LibfmJni.cpp",
+    ],
+}
+
+cc_library_headers {
+    name: "libfmjni-qcom-headers",
+    export_include_dirs: ["."],
+}
